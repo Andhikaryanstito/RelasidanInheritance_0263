@@ -35,3 +35,14 @@ public:
     void tambahPasien(pasien* pPasien);
     void cetakPasien();
 };
+void pasien::tambahDokter(dokter* pDokter) {
+    daftar_dokter.push_back(pDokter);
+}
+
+void pasien::cetakDokter() {
+    cout << "Daftar dokter yang menangani pasien \"" << nama << "\":\n";
+    for (auto& d : daftar_dokter) {
+        cout << "- " << d->nama << "\n";
+    }
+    cout << endl;
+}
