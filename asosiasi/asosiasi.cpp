@@ -46,3 +46,15 @@ void pasien::cetakDokter() {
     }
     cout << endl;
 }
+void dokter::tambahPasien(pasien* pPasien) {
+    daftar_pasien.push_back(pPasien);
+    pPasien->tambahDokter(this);
+}
+
+void dokter::cetakPasien() {
+    cout << "Daftar pasien dari dokter \"" << nama << "\":\n";
+    for (auto& p : daftar_pasien) {
+        cout << "- " << p->nama << "\n";
+    }
+    cout << endl;
+}
