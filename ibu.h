@@ -16,6 +16,6 @@ Class ibu{
             void cetakAnak();
           
 };
-void ibu::tambahAnak(anak* pAnak){
+void ibu::tambahAnak(anak* pAnak){ daftar_anak.push_back(pAnak);
    
 }
